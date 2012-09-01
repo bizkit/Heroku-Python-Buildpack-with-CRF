@@ -8,14 +8,16 @@ NAME=$($BIN_DIR/detect $BUILD_DIR) || exit 1
 cat <<EOF
 ---
 config_vars:
-  PATH: /app/.heroku/venv/bin:/bin:/usr/local/bin:/usr/bin
+  PATH: /app/.heroku/venv/bin:/bin:/usr/local/bin:/usr/bin:/app/vendor/crfpp/bin
   PYTHONUNBUFFERED: true
-  LIBRARY_PATH: /app/.heroku/vendor/lib
-  LD_LIBRARY_PATH: /app/.heroku/vendor/lib
+  LIBRARY_PATH: /app/.heroku/vendor/lib:/app/vendor/crfpp/lib
+  LD_LIBRARY_PATH: /app/.heroku/vendor/lib:/app/vendor/crfpp/lib
   LANG: en_US.UTF-8
   PYTHONHASHSEED: random
   PYTHONHOME: /app/.heroku/venv/
   PYTHONPATH: /app/
+  C_INCLUDE_PATH: /app/vendor/crfpp/include
+  CPLUS_INCLUDE_PATH: /app/vendor/crfpp/include
 EOF
 
 
