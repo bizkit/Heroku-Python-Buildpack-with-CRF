@@ -1,6 +1,15 @@
 Heroku buildpack: Python
 ========================
 
+This is the official Heroku python buildpack with
+[CRF++](http://crfpp.googlecode.com/svn/trunk/doc/index.html) machine learning tool libraries. Choose
+this repo for custom buildpack, and add the following to your `requirement.txt` to use python-crf++ on
+Heroku!!
+
+``
+http://crfpp-python-buildpack-for-heroku.googlecode.com/files/crfpp-0.57-python-for-heroku.tgz
+``
+
 This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for Python apps.
 It uses [virtualenv](http://www.virtualenv.org/) and [pip](http://www.pip-installer.org/).
 
